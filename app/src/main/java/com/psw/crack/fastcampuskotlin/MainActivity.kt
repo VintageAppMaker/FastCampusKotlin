@@ -1,10 +1,8 @@
 package com.psw.crack.fastcampuskotlin
-
+import advance.*
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.psw.crack.fastcampuskotlin.basic.First
-import com.psw.crack.fastcampuskotlin.basic.Second
-import com.psw.crack.fastcampuskotlin.basic.Third
+import basic.AnyTypeTest
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,9 +13,16 @@ class MainActivity : AppCompatActivity() {
 
         // 화면의 시작
         // 1.
-        First()
-        Second()
-        Third()
+        doTest(InfixTest(::WriteLn))
+        doTest(LambdasTest(::WriteLn))
+        doTest(AnyTypeTest(::WriteLn))
+        doTest(FuncExtTest(::WriteLn))
+        doTest(NewStyle1(::WriteLn))
+        doTest(NewStyle2(::WriteLn))
+    }
+
+    private fun doTest(o : TestClass){
+        o.doTest()
     }
 
     fun WriteLn( s : String) {
