@@ -7,6 +7,7 @@ class FirstTest(p : (Any) -> Unit) : TestClass(p){
         // 2. 형을 선언하지않았다면 변수를 대입시 형이 결정된다.
         // 3. 변수는 읽기전용과 읽기쓰기 상태로 선언된다.
         // 4. null은 엄격히 구분한다. -> null을 허용하는 변수는 ?로 정의
+        // 5. scope는 java와 유사하다.
 
         // 1
         println ("종결자(;)없어도 됩니다. ")
@@ -23,5 +24,14 @@ class FirstTest(p : (Any) -> Unit) : TestClass(p){
         // 4. null이 가능하다면 엘비스를 불러주세요
         //var MyMoney : Int = null
 
+        // 5. 모든 것은 먼저 선언되어 있어야 이해할 수 있다.
+        //println(message)
+
+        val message = "위에서는 액세스 불가함"
+        // 5. 어떻게 변수를 이해했을까?
+        println (hiMessage)
+
     }
+
+    val hiMessage : String = "Hi"
 }
