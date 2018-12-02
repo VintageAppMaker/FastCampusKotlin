@@ -1,6 +1,6 @@
 package basic
 import com.psw.crack.fastcampuskotlin.TestClass
-class AnyTypeTest(p : (String) -> Unit) : TestClass(p){
+class AnyTypeTest(p : (Any) -> Unit) : TestClass(p){
     override fun doTest() {
         var anything : Any
 
@@ -17,4 +17,6 @@ class AnyTypeTest(p : (String) -> Unit) : TestClass(p){
             }
         }
     }
+
+
 }

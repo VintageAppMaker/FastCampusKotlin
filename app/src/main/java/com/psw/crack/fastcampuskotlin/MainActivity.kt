@@ -1,8 +1,11 @@
 package com.psw.crack.fastcampuskotlin
-import advance.*
+
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import basic.AnyTypeTest
+import com.psw.crack.fastcampuskotlin.step1.FirstTest
+import com.psw.crack.fastcampuskotlin.step1.NumberTest
+
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,21 +15,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 화면의 시작
-        // 1.
-        doTest(InfixTest(::WriteLn))
-        doTest(LambdasTest(::WriteLn))
+        doTest(FirstTest(::WriteLn))
         doTest(AnyTypeTest(::WriteLn))
-        doTest(FuncExtTest(::WriteLn))
-        doTest(NewStyle1(::WriteLn))
-        doTest(NewStyle2(::WriteLn))
+        doTest(NumberTest(::WriteLn))
+
     }
 
     private fun doTest(o : TestClass){
         o.doTest()
     }
 
-    fun WriteLn( s : String) {
-        txtMessage.text = "${txtMessage.text}${s}\n"
+    fun WriteLn( any : Any) {
+        txtMessage.text = "${txtMessage.text}${any.toString()}\n"
     }
 
 }
