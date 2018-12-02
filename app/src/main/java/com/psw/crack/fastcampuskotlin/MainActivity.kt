@@ -5,6 +5,7 @@ import android.os.Bundle
 import basic.AnyTypeTest
 import com.psw.crack.fastcampuskotlin.step1.FirstTest
 import com.psw.crack.fastcampuskotlin.step1.NumberTest
+import com.psw.crack.fastcampuskotlin.step1.StringTest
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         doTest(FirstTest(::WriteLn))
         doTest(AnyTypeTest(::WriteLn))
         doTest(NumberTest(::WriteLn))
-
+        doTest(StringTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){
