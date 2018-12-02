@@ -2,10 +2,7 @@ package com.psw.crack.fastcampuskotlin
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import basic.AnyTypeTest
-import com.psw.crack.fastcampuskotlin.step1.FirstTest
-import com.psw.crack.fastcampuskotlin.step1.NumberTest
-import com.psw.crack.fastcampuskotlin.step1.StringTest
+import com.psw.crack.fastcampuskotlin.step1.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,10 +13,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 화면의 시작
-        doTest(FirstTest(::WriteLn))
-        doTest(AnyTypeTest(::WriteLn))
-        doTest(NumberTest(::WriteLn))
-        doTest(StringTest(::WriteLn))
+        //doTest(FirstTest(::WriteLn))
+        //doTest(AnyTypeTest(::WriteLn))
+        //doTest(NumberTest(::WriteLn))
+        //doTest(StringTest(::WriteLn))
+        //doTest(FunctionTest(::WriteLn))
+        //doTest(ConditionTest(::WriteLn))
+        //doTest(LabelTest(::WriteLn))
+        doTest(CollectionsTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){

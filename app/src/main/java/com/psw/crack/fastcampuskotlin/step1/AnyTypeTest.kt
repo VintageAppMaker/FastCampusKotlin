@@ -1,4 +1,5 @@
-package basic
+package com.psw.crack.fastcampuskotlin.step1
+
 import com.psw.crack.fastcampuskotlin.TestClass
 class AnyTypeTest(p : (Any) -> Unit) : TestClass(p){
     override fun doTest() {
