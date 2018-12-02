@@ -4,7 +4,7 @@ import com.psw.crack.fastcampuskotlin.TestClass
 class LabelTest(p : (Any) -> Unit): TestClass(p){
     override fun doTest() {
         ExitLoop();
-        kotlin.io.println(lambdaReturn())
+        println(lambdaReturn())
 
         // 함수형 스타일의 활용
         (0..10).forEach {  if (it > 3) return@forEach else println(it) }
