@@ -3,9 +3,7 @@ package com.psw.crack.fastcampuskotlin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.psw.crack.fastcampuskotlin.step1.*
-import com.psw.crack.fastcampuskotlin.step2.ClassTest
-import com.psw.crack.fastcampuskotlin.step2.InterAbstractTest
-import com.psw.crack.fastcampuskotlin.step2.PolyTest
+import com.psw.crack.fastcampuskotlin.step2.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -27,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         //doTest(ExceptionTest(::WriteLn))
         //doTest(ClassTest(::WriteLn))
         //doTest(PolyTest(::WriteLn))
-        doTest(InterAbstractTest(::WriteLn))
+        //doTest(InterAbstractTest(::WriteLn))
+        //doTest(ObjectTest(::WriteLn))
+        doTest(DataClassTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){
