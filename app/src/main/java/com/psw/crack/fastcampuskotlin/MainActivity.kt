@@ -3,6 +3,7 @@ package com.psw.crack.fastcampuskotlin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.psw.crack.fastcampuskotlin.step1.*
+import com.psw.crack.fastcampuskotlin.step2.ClassTest
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         //doTest(NumberTest(::WriteLn))
         //doTest(StringTest(::WriteLn))
         //doTest(FunctionTest(::WriteLn))
-        //doTest(ConditionTest(::WriteLn))
-        //doTest(LabelTest(::WriteLn))
+        doTest(ConditionTest(::WriteLn))
+        doTest(LabelTest(::WriteLn))
         //doTest(CollectionsTest(::WriteLn))
-        doTest(ExceptionTest(::WriteLn))
+        //doTest(ExceptionTest(::WriteLn))
+        doTest(ClassTest(::WriteLn))
     }
 
     private fun doTest(o : TestClass){
