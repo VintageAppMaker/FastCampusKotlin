@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity() {
         //doTest(DSLTest(::WriteLn))
         //doTest(CurryngTest(::WriteLn))
         //doTest(PropertiesTest(::WriteLn))
-        doTest(MultiReturnTest(::WriteLn))
+        //doTest(MultiReturnTest(::WriteLn))
+        //doTest(InitTest(::WriteLn))
+        doTest(InfixTest(::WriteLn))
 
     }
 
