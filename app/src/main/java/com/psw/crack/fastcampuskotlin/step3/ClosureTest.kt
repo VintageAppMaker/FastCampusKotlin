@@ -9,13 +9,14 @@ class ClosureTest( p : (Any) -> Unit ) : TestClass(p){
         println( fn(10) )
         println( fn(10) )
 
-        var f2 = Closure2({num -> num - 1 })
-        println ( f2() )
-        println ( f2() )
+        var decByOne = Closure2({ num -> num - 1 })
+        println ( decByOne() )
+        println ( decByOne() )
 
-        var f3 = Closure2({num -> num + 10 })
-        println ( f3() )
-        println ( f3() )
+        fun Add(num : Int) = num + 10
+        var addByTen = Closure2(::Add)
+        println ( addByTen() )
+        println ( addByTen() )
 
     }
 
