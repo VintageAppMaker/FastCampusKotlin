@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".step1.FirstActivity">
         </activity>
+        <activity android:name=".javainterlop.javaActivity">
+        </activity>
     </application>
 
 </manifest>

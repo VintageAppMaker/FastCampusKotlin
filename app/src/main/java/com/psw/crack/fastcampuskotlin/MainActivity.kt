@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.psw.crack.fastcampuskotlin.step1.*
 import com.psw.crack.fastcampuskotlin.step2.*
 import com.psw.crack.fastcampuskotlin.step3.*
+import com.psw.crack.fastcampuskotlin.using_kotlin.setClickHandler
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -40,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         //doTest(InitTest(::WriteLn))
         doTest(InfixTest(::WriteLn))
 
+        // using 확장함수
+        setClickHandler()
     }
 
     private fun doTest(o : TestClass){
