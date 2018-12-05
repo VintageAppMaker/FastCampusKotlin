@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         //doTest(ExtFunc2Test(::WriteLn))
         //doTest(DSLTest(::WriteLn))
         //doTest(CurryngTest(::WriteLn))
-        doTest(PropertiesTest(::WriteLn))
+        //doTest(PropertiesTest(::WriteLn))
+        doTest(MultiReturnTest(::WriteLn))
 
     }
 
