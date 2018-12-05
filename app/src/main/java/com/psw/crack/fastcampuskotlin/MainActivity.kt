@@ -32,7 +32,11 @@ class MainActivity : AppCompatActivity() {
         //doTest(LambdasTest(::WriteLn))
         //doTest(ExtFuncTest(::WriteLn))
         //doTest(ClosureTest(::WriteLn))
-        doTest(ExtFunc2Test(::WriteLn))
+        //doTest(ExtFunc2Test(::WriteLn))
+        //doTest(DSLTest(::WriteLn))
+        //doTest(CurryngTest(::WriteLn))
+        doTest(PropertiesTest(::WriteLn))
+
     }
 
     private fun doTest(o : TestClass){
