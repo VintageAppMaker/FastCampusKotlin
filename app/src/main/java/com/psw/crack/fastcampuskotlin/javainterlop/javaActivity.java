@@ -6,7 +6,7 @@ import android.util.Log;
 import com.psw.crack.fastcampuskotlin.R;
 
 // static하게 import한다.
-import static com.psw.crack.fastcampuskotlin.javainterlop.JavaImportKt.kotlinEventHandler;
+import static com.psw.crack.fastcampuskotlin.javainterlop.JavaActivitytKt.kotlinEventHandler;
 
 public class javaActivity extends AppCompatActivity {
 
