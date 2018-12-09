@@ -33,7 +33,7 @@ class InterAbstractTest(p : (Any) -> Unit ) : TestClass(p){
     }
 
     class TestAbstractImp : TestAbstract(){
-        override fun abstractFunc() = kotlin.io.println("TestAbstractImp abstractFunc")
+        override fun abstractFunc() = println("TestAbstractImp abstractFunc")
         // companion object {} 안에서 구현해야 static 가능
         companion object {
             var staticVar = "companion staticVar"
