@@ -4,25 +4,46 @@ import com.psw.crack.fastcampuskotlin.TestClass
 
 class DataClassTest( p: (Any) -> Unit) : TestClass(p){
     override fun doTest() {
-        var data1 = BasicInfo("김씨", 30)
-        var data2 = DetailInfo(name = "박씨",
-            dummy = DummyClass().apply { reserved = "확장정보" })
+        // 1. 일반 클래스로 데이터값을 할당해보기
+        var a = A()
+        a.power = 3
+        a.name   = "snake"
 
-        var (name1, age1) = data1
-        println ("$name1 : $age1")
-        var (name2, age2, dummy2) = data2
-        println ("$name2 : ${dummy2?.reserved}")
+        println (a)
 
-        // 이 부분이 제일 유용함
-        var data4 = data2.copy(name = "신씨")
-        println ("${data4.toString()}")
+        // 2. data class 사용해보기
+        var d0 = DataA("AAA", 3)
+        var d  = DataA(nLevel = 3)
+
+        println (d0)
+        println (d)
+
+        // 3. data class에서 body 적용해보기
+        var d3 = DataA(nLevel = 11)
+        d3.job = "archer"
+        println (d3)
+
+        // 4. data class에서 copy 메소드
+        var d4 = d3.copy(name = "동작구디아블로")
+        println (d4)
+
+        // 5. data class에서 destruction
+        var (name) = d4
+        println (name)
+
+        var (name2, power) = d4
+        println ("$name2 $power ")
 
     }
 
-    class DummyClass{
-        var reserved : String? = null
+    class A {
+        var name   : String = ""
+        var power  : Int    = 0
     }
 
-    data class BasicInfo(var name : String, var age : Int)
-    data class DetailInfo(var name : String, var age : Int = 40, var dummy :DummyClass? = null )
+    data class DataA(var name : String ="이름없음", var nLevel : Int){
+        var job : String = ""
+        operator fun plus (d : DataA){ this.nLevel + d.nLevel}
+    }    
+    
 }
